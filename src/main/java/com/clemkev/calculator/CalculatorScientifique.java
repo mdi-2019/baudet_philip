@@ -1,6 +1,7 @@
 package com.clemkev.calculator;
 
 import java.util.ArrayList;
+import java.lang.Math;
 
 public class CalculatorScientifique extends Calculator {
     private ArrayList<String> commands;
@@ -8,12 +9,26 @@ public class CalculatorScientifique extends Calculator {
     public CalculatorScientifique() {
         super();
         commands = new ArrayList<String>();
+        commands.add("sqrt");
+        commands.add("sin");
+        commands.add("cos");
+        commands.add("tan");
     }
 
     @Override
-    public Double exec(String cmd, Double ...params) {
-        return null;
-        //TODO: Switch
+    public void exec(String cmd, Double param) {
+        double res;
+        switch (cmd){
+            case"sqrt":
+                res = sqrt();
+            case"sin":
+                res = sin();
+            case"cos":
+                res = cos();
+            case"tan":
+                res = tan();
+
+        }
     }
 
     @Override
@@ -24,5 +39,21 @@ public class CalculatorScientifique extends Calculator {
     @Override
     public String getCommands() {
         return commands.toString();
+    }
+
+    public double sqrt(){
+        return Math.sqrt(getLastRes());
+    }
+
+    public double sin(){
+        return Math.sin(getLastRes());
+    }
+
+    public double cos(){
+        return Math.cos(getLastRes());
+    }
+
+    public double tan(){
+        return Math.tan(getLastRes());
     }
 }
