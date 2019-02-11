@@ -1,6 +1,5 @@
 package com.clemkev.calculator;
 
-import java.util.ArrayList;
 
 abstract public class Calculator {
     private Double lastRes;
