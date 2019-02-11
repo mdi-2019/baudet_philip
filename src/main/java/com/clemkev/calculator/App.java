@@ -24,15 +24,20 @@ public class App
 
         while(run) {
             //TODO: On affiche les commandes disponibles
-            System.out.println();
             System.out.print("Commande " + calc.getCommands() + ": ");
-            String cmd = sc.nextLine();
+            String cmd = sc.next();
+
+            if (cmd.equals("exit")) {
+                run = false;
+                break;
+            }
 
             System.out.print("Param : ");
             Double param = sc.nextDouble();
             //TODO: On récupère la commande, et enlève les espaces avant/après
             if(calc.isValid(cmd)) {
-                System.out.println(calc.exec(cmd, param));
+                calc.exec(cmd, param);
+                System.out.println(calc.getLastRes());
             } else {
                 System.out.println("Commande non valide.");
             }
