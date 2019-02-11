@@ -17,18 +17,19 @@ public class CalculatorScientifique extends Calculator {
 
     @Override
     public void exec(String cmd, Double param) {
-        double res;
-        switch (cmd){
-            case"sqrt":
+        double res=0;
+        switch (cmd) {
+            case "sqrt":
                 res = sqrt();
-            case"sin":
+            case "sin":
                 res = sin();
-            case"cos":
+            case "cos":
                 res = cos();
-            case"tan":
+            case "tan":
                 res = tan();
-
         }
+        setLastRes(res);
+
     }
 
     @Override
