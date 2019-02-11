@@ -19,7 +19,7 @@ abstract public class Calculator {
 
     public abstract Boolean isValid(String cmd);
 
-    public abstract void exec(String cmd, Double params);
+    public abstract void exec(String cmd, Double param);
 
     public abstract String getCommands();
 }

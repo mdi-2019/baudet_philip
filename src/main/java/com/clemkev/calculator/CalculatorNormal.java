@@ -15,9 +15,37 @@ public class CalculatorNormal extends Calculator {
     }
 
     @Override
-    public Double exec(String cmd, Double ...params) {
-        return null;
-        //TODO: Switch
+    public void exec(String cmd, Double param) {
+        switch (cmd) {
+            case "add":
+                add(this.getLastRes(), param);
+                break;
+            case "sub":
+                sub(this.getLastRes(), param);
+                break;
+            case "div":
+                div(this.getLastRes(), param);
+                break;
+            case "mult":
+                mult(this.getLastRes(), param);
+                break;
+        }
+    }
+
+    private void add(Double param1, Double param2) {
+        setLastRes(param1+param2);
+    }
+
+    private void sub(Double param1, Double param2) {
+        setLastRes(param1-param2);
+    }
+
+    private void div(Double param1, Double param2) {
+        setLastRes(param1/param2);
+    }
+
+    private void mult(Double param1, Double param2) {
+        setLastRes(param1*param2);
     }
 
     @Override
