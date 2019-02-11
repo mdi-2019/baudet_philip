@@ -11,8 +11,7 @@ public class CalculatorScientifique extends Calculator {
     }
 
     @Override
-    public Double exec(String cmd, Double ...params) {
-        return null;
+    public void exec(String cmd, Double params) {
         //TODO: Switch
     }
 
