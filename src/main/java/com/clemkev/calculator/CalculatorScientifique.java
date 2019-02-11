@@ -21,12 +21,16 @@ public class CalculatorScientifique extends Calculator {
         switch (cmd) {
             case "sqrt":
                 res = sqrt();
+                break;
             case "sin":
                 res = sin();
+                break;
             case "cos":
                 res = cos();
+                break;
             case "tan":
                 res = tan();
+                break;
         }
         setLastRes(res);
 
